@@ -17,7 +17,12 @@ Route::get('/', 'HomeController@showHome');
 
 // Dashboard
 Route::get('dashboard', 'DashboardController@showDashboard');
-Route::get('dashboard/{page}', 'DashboardController@showPage');
+Route::get('repos', 'DashboardController@reposPage');
+Route::get('repo/{id}', 'DashboardController@repoPage');
+
+// Sync
+Route::get('sync', 'GithubController@syncRepos');
+Route::get('repo/{id}/sync', 'GithubController@syncMetrics');
 
 // Authentication
 Route::get('login', 'LoginController@showLogin');
@@ -29,5 +34,7 @@ Route::get('wip', function(){
   return "This part of the site is not available yet. Come back later!";
 });
 
-// Sync
-Route::get('sync', 'GithubController@sync');
+// Errors
+Route::get('404', function(){
+  return "Error 404 Not Found";
+});

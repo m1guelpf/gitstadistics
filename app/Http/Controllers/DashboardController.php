@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Repo;
+use App\Metrics;
 
 class DashboardController extends Controller
 {
@@ -17,18 +18,28 @@ class DashboardController extends Controller
       return "This is your dashboard!";
     }
 
-    public function showPage($page){
-      if ($page == 'repos'){
-        return $this->reposPage();
-      }
-    }
 
     public function reposPage(){
       $repos = Repo::where('userid', Auth::user()->id)->get();
       if (count($repos) == 0) {
-        return view('empty');
+        return view('empty.repos');
       } else {
         return view('repos')->with('repos', $repos);
       }
     }
+   public function repoPage($id){
+     $repo = Repo::find($id)->first();
+     if (count($repo) == 0){
+       return redirect('404');
+     }
+     if ($repo->userid != Auth::id()){
+       return redirect('401');
+     }
+     $metrics = Metrics::where('repoid', $repo->id)->get();
+     if (count($metrics) == 0){
+       return view('empty.metrics')->with('repo', $repo);
+     } else{
+       return "<h1><center>It works!</center></h1>";
+     }
+   }
 }

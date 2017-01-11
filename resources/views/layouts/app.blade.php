@@ -18,7 +18,7 @@
     <link href="/css/bootstrap-social.css" rel="stylesheet">
     <link href="/css/states.css" rel="stylesheet">
     <link href="/css/tooltips.css" rel="stylesheet">
-
+    <link href="/css/custom.css" rel="stylesheet">
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
