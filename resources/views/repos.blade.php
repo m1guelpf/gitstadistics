@@ -12,7 +12,7 @@
                     <tbody>
                       @foreach ($repos as $repo)
                       <div id="{{ $repo->id }}" class="repo">
-                        <span class="mega-octicon octicon-repo"></span>
+                        <span class="octicon octicon-repo"></span>
                         <a href="{{ url('repo').'/'.$repo->id }}" style="cursor:pointer">{{ $repo->full_name }}</a>
                       </div>
                       @endforeach

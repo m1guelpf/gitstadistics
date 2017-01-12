@@ -13,7 +13,7 @@
                       <div class="blankslate">
                         <span class="mega-octicon octicon-repo blankslate-icon"></span>
                         <h3>Looks like you haven't got any repositories</h3>
-                        <p>You may have to <a href="{{ url('sync') }}">sync</a> them...</p>
+                        <p>You may have to <a href="{{ url('repos/sync') }}">sync</a> them...</p>
   </div>
                 </div>
             </div>

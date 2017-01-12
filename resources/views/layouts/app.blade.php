@@ -18,6 +18,7 @@
     <link href="/css/bootstrap-social.css" rel="stylesheet">
     <link href="/css/states.css" rel="stylesheet">
     <link href="/css/tooltips.css" rel="stylesheet">
+    <link href="/css/materialize.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
     <!-- Scripts -->
     <script>
@@ -89,5 +90,7 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script src="/js/blankstate.js" async></script>
+    <script src="/js/materialize.min.js" async></script>
+    <script src="/js/custom.js" async></script>
 </body>
 </html>

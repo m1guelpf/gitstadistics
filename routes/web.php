@@ -22,7 +22,7 @@ Route::get('repos', 'DashboardController@reposPage');
 Route::get('repo/{id}', 'DashboardController@repoPage');
 
 // Sync
-Route::get('sync', 'GithubController@syncRepos');
+Route::get('repos/sync', 'GithubController@syncRepos');
 Route::get('repo/{id}/sync', 'GithubController@syncMetrics');
 
 // Authentication

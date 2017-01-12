@@ -18,7 +18,7 @@ class GithubController extends Controller
     {
         $this->listRepos();
 
-        return redirect('dashboard');
+        return redirect('repos');
     }
 
     public function listRepos()
