@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Metrics extends Model
 {
-    protected $table = "metrics";
+    protected $table = 'metrics';
     public $timestamps = false;
 }

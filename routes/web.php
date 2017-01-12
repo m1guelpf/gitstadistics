@@ -1,6 +1,7 @@
 <?php
-use Illuminate\Queue\SyncQueue;
+
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,11 +31,11 @@ Route::post('login', 'LoginController@authorizeUser');
 Route::get('callback', 'LoginController@loginUser');
 
 // Work in Progress
-Route::get('wip', function(){
-  return "This part of the site is not available yet. Come back later!";
+Route::get('wip', function () {
+    return 'This part of the site is not available yet. Come back later!';
 });
 
 // Errors
-Route::get('404', function(){
-  return "Error 404 Not Found";
+Route::get('404', function () {
+    return 'Error 404 Not Found';
 });
