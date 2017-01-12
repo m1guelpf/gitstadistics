@@ -41,12 +41,13 @@ class DashboardController extends Controller
         if (count($metrics) == 0) {
             return view('empty.metrics')->with('repo', $repo);
         } else {
-        $repo = $metrics->repo;
-        $referers = json_decode($metrics->referers);
-        $paths = json_decode($metrics->paths);
-        $visits = json_decode($metrics->views);
-        $clones = json_decode($metrics->clones);
-        return view('metrics', ['metrics' => $metrics, 'repo' => $repo, 'referers' => $referers, 'paths' => $paths, 'visits' => $visits, 'clones' => $clones]);
+            $repo = $metrics->repo;
+            $referers = json_decode($metrics->referers);
+            $paths = json_decode($metrics->paths);
+            $visits = json_decode($metrics->views);
+            $clones = json_decode($metrics->clones);
+
+            return view('metrics', ['metrics' => $metrics, 'repo' => $repo, 'referers' => $referers, 'paths' => $paths, 'visits' => $visits, 'clones' => $clones]);
         }
     }
 }
