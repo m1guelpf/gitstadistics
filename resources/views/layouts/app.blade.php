@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/flatty.min.css" rel="stylesheet">
+    <link href="/css/toastr.min.css" rel="stylesheet">
     <link href="/css/avatars.css" rel="stylesheet">
     <link href="/css/blankstate.css" rel="stylesheet">
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -89,8 +90,31 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/toastr.min.js"></script>
     <script src="/js/blankstate.js" async></script>
     <script src="/js/materialize.min.js" async></script>
     <script src="/js/custom.js" async></script>
+    <script>
+  @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type', 'info') }}";
+    switch(type){
+        case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
+        
+        case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+
+        case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+
+        case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+    }
+  @endif
+</script>
 </body>
 </html>
