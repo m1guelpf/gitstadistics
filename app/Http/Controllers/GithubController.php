@@ -51,6 +51,7 @@ class GithubController extends Controller
     public function syncMetrics($id)
     {
         Github::authenticate(Auth::user()->token, null, 'http_token');
+        Metrics::where('repoid', '=', $id)->delete();
         $referers = $this->getReferers($id);
         $paths = $this->getPaths($id);
         $views = $this->getViews($id);

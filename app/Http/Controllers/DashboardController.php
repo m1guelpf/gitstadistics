@@ -37,7 +37,7 @@ class DashboardController extends Controller
         if ($repo->userid != Auth::id()) {
             return redirect('401');
         }
-        $metrics = Metrics::where('repoid', $repo->id)->firstOrFail();
+        $metrics = Metrics::where('repoid', '=', $repo->id)->firstOrFail();
         if (count($metrics) == 0) {
             return view('empty.metrics')->with('repo', $repo);
         } else {
