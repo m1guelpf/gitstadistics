@@ -1,6 +1,8 @@
 # Gitstadistics
 A Laravel interface for viewing your repositories stadistics.
 
+**NOTE: This project is no longer mantained. In fact, is was never mantained... :smile:***
+
 ## Features:
 
 - Multi-user support: You can add all the users you want. In fact, anyone with a Github account can use it if you expose it on the internet!
