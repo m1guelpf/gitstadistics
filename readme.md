@@ -1,7 +1,7 @@
 # Gitstadistics
 A Laravel interface for viewing your repositories stadistics.
 
-**NOTE: This project is no longer mantained. In fact, is was never mantained... :smile:***
+**NOTE: This project is no longer mantained. In fact, is was never mantained... :smile:**
 
 ## Features:
 
